@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  background: linear-gradient(to Top, rgb(216, 191, 189), rgb(230, 50, 50));
+  height: 100%;
+  width: 98%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+.app {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
+  border: 2px solid;
+  padding: 20px;
+  background: linear-gradient(to Bottom, red, white);
+  border-radius: 5px;
+  width: 40%;
+  margin: auto;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
+.nc-news-title {
   will-change: filter;
   transition: filter 300ms;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+
 }
-.logo:hover {
+.nc-news-filter:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.react:hover {
+.nc-news-filter.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  border-radius: 5px;
+  border: solid red;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  top: 0;
+  margin-bottom: 2px;
+  flex-direction: column;
+}
+.Nav {
+  border-radius: 5px;
+  height: auto;
+  border: solid rgb(0, 0, 0);
+  padding: 5px;
+  background-color: grey;
+  display: flex;
+  flex: top;
+}
+.nav-button {
+  padding: 2px;
+  border-radius: 5px;
+  border: solid rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-button:hover {
+  color: red;
+  background-color: black;
+  filter: drop-shadow(0 0 2em red);
+}
+.nav-button.react:hover {
+  color: red;
+  background-color: black;
+  filter: drop-shadow(0 0 2em red);
 }
 
-.card {
-  padding: 2em;
+.article-format {
+  border: 2px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: centre;
+  gap: 60px;
+  margin-top: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.article-box{
+  border: 2px solid rgb(0, 0, 0);
+  height: 100%;
+  width: 90%;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 50%;
+  border-radius: 5px;
 }
