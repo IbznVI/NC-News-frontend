@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { getArticleById } from "./api"
+import { CommentList } from "./commentList"
 
 export const ArticlePage = () => {
     const { article_id } = useParams();
@@ -30,6 +31,7 @@ export const ArticlePage = () => {
                      <p> By: {article.author} Date: {new Date(article.created_at).toLocaleDateString()}</p>
                      <p>Comment Count: {article.comment_count}</p>
                      <p>Votes: {article.votes}</p>
+                     <CommentList article_id={article_id} />
                     </article>
                 )}
         </section>
