@@ -10,11 +10,7 @@ export const ArticleItems = () => {
         setIsLoading(true);
         getAllArticles().then((response) => {
             setIsLoading(false);
-            if (response && response.articles) {
                 setArticles(response.articles);
-            } else {
-                setArticles([])
-            }
         }).catch((error) => {
             console.error("Error fetching articles: ", error);
             setIsLoading(false)
@@ -22,10 +18,9 @@ export const ArticleItems = () => {
 },[])
 
     return (
-        <section>
-            <div className="articles-box-style">
+        <section  className="articles-box-style">
                 {isLoading ? (
-                    <p>Loading...</p>
+                    <p className="loading">Loading...</p>
                 ) : (
                     <ul className="article-format">
                         {articles && articles.length > 0 ? (
@@ -37,7 +32,6 @@ export const ArticleItems = () => {
                         )}
                     </ul>
                 )}
-            </div>
         </section>
     );
 };

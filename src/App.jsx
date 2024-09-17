@@ -1,15 +1,19 @@
-import { useState } from 'react'
 import './App.css'
+import { Route, Routes } from "react-router-dom"
 import { Header } from "./components/header"
 import { ArticleItems } from "./components/articleItems"
+import { ArticlePage } from "./components/articlePage"
+import { HomePage } from './components/homePage'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="page-background">
       <Header />
-      <ArticleItems />
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/articles" element={<ArticleItems />}/>
+        <Route path="/articles/:article_id" element={<ArticlePage />}/>
+      </Routes>
     </div>
   )
 }
