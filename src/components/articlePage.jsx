@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getArticleById } from "./api";
+import { getArticleById, patchVotes } from "./api";
 import { CommentList } from "./commentList";
 import { useVotes } from "./articleVotes";
 
@@ -12,7 +12,7 @@ export const ArticlePage = () => {
 
     function handleVote(inc_votes) {
         setVotes((previousVotes) => previousVotes + inc_votes);
-        voteArticle(article_id, inc_votes).catch(() => {
+        patchVotes(article_id, inc_votes).catch(() => {
             setVotes((previousVotes) => previousVotes - inc_votes);
         });
     }
@@ -37,6 +37,7 @@ export const ArticlePage = () => {
                     <h1>{article.title}</h1>
                     <img src={article.article_img_url} />
                     <h3>{article.topic}</h3>
+                    <p>{article.body}</p>
                     <p>By: {article.author} Date: {new Date(article.created_at).toLocaleDateString()}</p>
                     <p>Comment Count: {article.comment_count}</p>
                     <p>Votes: {currentVotes}</p>
