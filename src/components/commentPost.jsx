@@ -38,6 +38,6 @@ return(
         )}
         <input className="comment-submit" type="submit" disabled={isLoading} />
     </form>
-)
+    )
 }
 
