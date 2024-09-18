@@ -26,3 +26,10 @@ export const patchVotes = (article_id, inc_votes) => {
     return api.patch(route, options).then(({data})=>
     data)
 }
+
+export const postComment = (postBody, article_id) => {
+    return api.post(`/articles/${article_id}/comments`, postBody)
+    .then(({data: {comment}})=>{
+        return comment
+    })
+}
