@@ -19,3 +19,10 @@ export const getCommentById = (article_id) => {
         return data
     })
 }
+
+export const patchVotes = (article_id, inc_votes) => {
+    const route = `/articles/${article_id}`
+    const options = { inc_votes }
+    return api.patch(route, options).then(({data})=>
+    data)
+}
