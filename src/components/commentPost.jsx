@@ -1,6 +1,6 @@
 import { useState, useContext } from "react"
 import { UserContext } from "../contexts/userContext"
-import { postComment } from "./api"
+import { getCommentById, postComment } from "./api"
 
 export const CommentForm = ({ comments, setComments, article_id }) => {
     const [commentText, setCommentText] = useState("")
@@ -40,3 +40,4 @@ return(
     </form>
 )
 }
+
