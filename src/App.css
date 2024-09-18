@@ -137,3 +137,11 @@ img {
   border-radius: 3px;
   background-color: rgb(224, 194, 111);
 }
+
+.upvote {
+  background-color: green;
+}
+
+.downvote {
+  background-color: rgb(128, 0, 0);
+}
