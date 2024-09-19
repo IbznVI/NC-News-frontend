@@ -4,29 +4,8 @@ export const ArticleBox = ({ article, searchParams, setSearchParams }) => {
         const handleClick = ({ target: {name}})=>{
             setSearchParams({...searchParams, topic: name})
         }
-    
-        const [CategoriesDropDownOpen, setCategoriesDropDownOpen] = useState(false)
-
-        const handleCategoriesButtonClick = () => {
-            setCategoriesDropDownOpen(!CategoriesDropDownOpen)
-        }
-
  return (
     <div>
-            <button
-          className="nav-button"
-          type="button"
-          onClick={handleCategoriesButtonClick}
-        >
-          Categories
-        </button>
-        {CategoriesDropDownOpen && (
-          <div className="categories-dropdown">
-            <Link to="/articles?topic=cooking">       Cooking      </Link>
-            <Link to="/articles?topic=coding">      Coding        </Link>
-            <Link to="/articles?topic=football">      Football     </Link>
-          </div>
-        )}
     <li className="article-box">
         <h2>{article.title}</h2>
         <Link to={`/articles/${article.article_id}`}>View Full Article</Link>

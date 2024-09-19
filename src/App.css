@@ -88,12 +88,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f1ea81;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
+  background-color: white;
 }
 button:focus,
 button:focus-visible {
@@ -201,4 +202,14 @@ img {
     border: solid rgb(255, 0, 0);
     color: rgb(0, 0, 0);
     background-color: white;
+}
+
+.sorting-options-box {
+  background-color: rgb(228, 208, 119);
+}
+
+.sorting-button {
+  background-color: white;
+  padding: 5px; 
+  margin-left: 10px;
 }
