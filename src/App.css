@@ -116,7 +116,7 @@ button:focus-visible {
 img {
   display: flex;
   align-items: center;
-  margin-left: 97px;
+  margin-left: 60px;
   width: 75%;
   height: 50%;
   border-radius: 5px;
@@ -165,7 +165,6 @@ img {
   margin-top: 10px;
 }
 
-
 .comment-submit:hover {
   color: rgb(230, 190, 116);
   background-color: black;
@@ -175,4 +174,31 @@ img {
   color: rgb(230, 190, 116);
   background-color: black;
   filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+
+.topic-button {
+  border-radius: 2px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border-color: rgb(199, 169, 0);
+  background-color: rgb(165, 164, 164);
+}
+
+.topic-button:hover {
+  color: rgb(230, 190, 116);
+  background-color: black;
+  filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+.topic-button:hover {
+  color: rgb(230, 190, 116);
+  background-color: black;
+  filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+
+.categories-dropdown {
+    padding: 2px;
+    border-radius: 5px;
+    border: solid rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: white;
 }
