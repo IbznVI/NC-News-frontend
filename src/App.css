@@ -147,6 +147,10 @@ img {
   background-color: rgb(128, 0, 0);
 }
 
+.comment-delete {
+  background-color: rgb(128, 0, 0);
+}
+
 .comment-post {
   display: flex;
   width: 90%;

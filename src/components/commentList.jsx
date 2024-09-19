@@ -22,7 +22,7 @@ export const CommentList = ({ article_id }) => {
             />
             <ul>
                 {articleComments.map((comment)=>{
-                    return <CommentBox className="comment-box" key={comment.comment_id} comment={comment} />
+                    return <CommentBox className="comment-box" key={comment.comment_id} comment={comment} setArticleComments={setArticleComments} />
                 })}
             </ul>
         </section>
