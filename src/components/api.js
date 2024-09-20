@@ -20,12 +20,14 @@ export const getCommentById = (article_id) => {
     })
 }
 
-export const patchVotes = (article_id, inc_votes) => {
-    const route = `/articles/${article_id}`
-    const options = { inc_votes }
-    return api.patch(route, options).then(({data})=>
-    data)
-}
+export const patchVotes = (article_id, voteChange) => {
+    const patchBody = {
+      inc_votes: voteChange
+    }
+    return api.patch(`/articles/${article_id}`, patchBody).then(({ data }) => {
+      return data.article
+    })
+  }
 
 export const postComment = (postBody, article_id) => {
     return api.post(`/articles/${article_id}/comments`, postBody)
