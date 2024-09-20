@@ -17,16 +17,22 @@ Ibzn's News Portal is a responsive web application that allows users to explore 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/IbznVI/NC-News-frontend.git
-   ```bash
+   ```
 # Step 2: Navigate to the project directory
+```bash
 cd NC-News-frontend
-# Step 3: Install dependencies
-npm install
-# Step 4: Start the development server
-npm run dev
-# Step 5: Open your browser and visit the app
-http://localhost:5173
 ```
+# Step 3: Install dependencies
+```bash
+npm install
+```
+# Step 4: Start the development server
+```bash
+npm run dev
+```
+# Step 5: Open your browser and visit the app
+<your local host link here>
+
 ## :link: Back End Repository
 ```bash
 The back-end API for this project can be found at:
