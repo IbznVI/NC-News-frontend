@@ -1,18 +1,17 @@
 body {
-  background: linear-gradient(to Top, rgb(216, 191, 189), rgb(230, 50, 50));
+  background-color: #1a1a1a;
   height: 100%;
   width: 98%;
   display: grid;
   place-items: center;
   margin: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 .app {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
   border: 2px solid;
   padding: 20px;
-  background: linear-gradient(to Bottom, red, white);
   border-radius: 5px;
   width: 40%;
   margin: auto;
@@ -25,7 +24,6 @@ body {
   font-size: 5em;
   letter-spacing: -2px;
   text-transform: uppercase;
-
 }
 .nc-news-filter:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -43,7 +41,9 @@ body {
   top: 0;
   margin-bottom: 2px;
   flex-direction: column;
+  background-color: rgb(235, 185, 185);
 }
+
 .Nav {
   border-radius: 5px;
   height: auto;
@@ -88,12 +88,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f1ea81;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
+  background-color: white;
 }
 button:focus,
 button:focus-visible {
@@ -101,17 +102,114 @@ button:focus-visible {
 }
 
 .article-box{
-  border: 2px solid rgb(0, 0, 0);
+  border: 5px solid rgb(241, 197, 2);
   height: 100%;
   width: 90%;
   padding: 20px;
   border-radius: 3px;
+  background-color: rgb(224, 194, 111);
+}
+
+.loading{
+  color: white;
 }
 
 img {
   display: flex;
   align-items: center;
+  margin-left: 60px;
   width: 75%;
   height: 50%;
   border-radius: 5px;
+}
+
+.homepage {
+  border: solid black;
+  background-color: antiquewhite;
+  height: 1100px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.article {
+  border: 2px solid rgb(0, 0, 0);
+  height: 100%;
+  width: 90%;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: rgb(224, 194, 111);
+}
+
+.upvote {
+  background-color: green;
+}
+
+.downvote {
+  background-color: rgb(128, 0, 0);
+}
+
+.comment-delete {
+  background-color: rgb(128, 0, 0);
+}
+
+.comment-post {
+  display: flex;
+  width: 90%;
+  margin-left: 30px;
+  flex-direction: column;
+  border: #646cff;
+}
+
+.comment-submit {
+  width: 10%;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.comment-submit:hover {
+  color: rgb(230, 190, 116);
+  background-color: black;
+  filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+.comment-submit:hover {
+  color: rgb(230, 190, 116);
+  background-color: black;
+  filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+
+.topic-button {
+  border-radius: 2px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border-color: rgb(199, 169, 0);
+  background-color: rgb(165, 164, 164);
+}
+
+.topic-button:hover {
+  color: rgb(230, 190, 116);
+  background-color: black;
+  filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+.topic-button:hover {
+  color: rgb(230, 190, 116);
+  background-color: black;
+  filter: drop-shadow(0 0 2em rgb(255, 240, 26));
+}
+
+.categories-dropdown {
+    padding: 2px;
+    border-radius: 5px;
+    border: solid rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.sorting-options-box {
+  background-color: rgb(228, 208, 119);
+}
+
+.sorting-button {
+  background-color: white;
+  padding: 5px; 
+  margin-left: 10px;
 }
