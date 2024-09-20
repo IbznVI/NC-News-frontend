@@ -4,6 +4,7 @@ import { Header } from "./components/header"
 import { ArticleItems } from "./components/articleItems"
 import { ArticlePage } from "./components/articlePage"
 import { HomePage } from './components/homePage'
+import { NotFoundPage } from './components/ErrorHandling'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />}/>
         <Route path="/articles" element={<ArticleItems />}/>
         <Route path="/articles/:article_id" element={<ArticlePage />}/>
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </div>
   )

@@ -22,14 +22,14 @@ export const SortBy = ({ searchParams, setSearchParams }) => {
               name="created_at"
               onClick={handleClick}
             >
-              Sort by Ascending
+              Sort by Descending 
             </button>
             <button
               className="sorting-button"
               name="created_at asc"
               onClick={handleClick}
             >
-              Sort by Descending
+              Sort by Ascending
             </button>
           </li>
           <li className="sorting-options-item">
@@ -39,27 +39,27 @@ export const SortBy = ({ searchParams, setSearchParams }) => {
               name="comment_count"
               onClick={handleClick}
             >
-              Sort by Ascending
+              Sort by Descending 
             </button>
             <button
               className="sorting-button"
               name="comment_count asc"
               onClick={handleClick}
             >
-              Sort by Descending
+              Sort by Ascending
             </button>
           </li>
           <li className="sorting-options-item">
             <p>Votes</p>
             <button className="sorting-button" name="votes" onClick={handleClick}>
-              Sort by Ascending
+              Sort by Descending 
             </button>
             <button
               className="sorting-button"
               name="votes asc"
               onClick={handleClick}
             >
-              Sort by Descending
+              Sort by Ascending
             </button>
           </li>
         </ul>

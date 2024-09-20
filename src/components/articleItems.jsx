@@ -4,6 +4,7 @@ import { ArticleBox } from "./articleBox"
 import { useSearchParams } from "react-router-dom";
 import { SortBy } from "./SortBy";
 import { Link } from "react-router-dom";
+import { ErrorHandler } from "./ErrorHandling";
 
 const HandleSortByButtonClick = ({children}) => {
     const [SortByDropDownOpen, setSortByDropDownOpen] = useState(false)
@@ -25,7 +26,7 @@ export const ArticleItems = () => {
     const [articles, setArticles] = useState([]);
     const [ searchParams, setSearchParams] = useSearchParams();
     const topicQuery = searchParams.get("topic")
-    const [isError, setIsError] = useState(false)
+    const [isError, setIsError] = useState(null)
     const sortByQuery = searchParams.get("sort_by")
     const orderQuery = searchParams.get("order")
     const params = {
@@ -49,15 +50,15 @@ export const ArticleItems = () => {
         }).catch((error) => {
             console.error("Error fetching articles: ", error);
             setIsLoading(false)
-            setIsError(true)
+            setIsError(err)
         })
 },[topicQuery, sortByQuery, orderQuery])
 
-if (isError){
-    return <p>Bad Request</p>
-}
-
     return (
+        <div>
+            {isError ? (
+                <ErrorHandler message={isError} setSearchParams={setSearchParams}/>
+            ) : (
         <section  className="articles-box-style">
             <div className="sort-by-section">
             <HandleSortByButtonClick className="sort-by-button">
@@ -93,6 +94,7 @@ if (isError){
                         )}
                     </ul>
                 )}
-        </section>
+        </section>)}
+        </div>
     );
 };
